@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Card } from 'src/app/models/card.model';
+import { Component, Input } from '@angular/core';
 import { CardService } from 'src/app/service/card-data.service';
 import { CardState } from 'src/app/stateManager/card-state';
 
@@ -9,6 +8,8 @@ import { CardState } from 'src/app/stateManager/card-state';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent {
+
+  @Input() isVisible: boolean = false;
 
   constructor(
     protected cardService: CardService,

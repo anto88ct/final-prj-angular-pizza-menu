@@ -8,7 +8,6 @@ import { CardService } from '../service/card-data.service';
 })
 export class CardState {
   cards: Card[] = [];
-  isVisible: boolean = true; //to see card feature
   btnDisabled: boolean = true; //to enable/disable modal's button
   isModal: boolean = true; //to show modal
   init(cards: Card[]) {
