@@ -1,0 +1,22 @@
+<div class="container" *ngFor="let item of cardState.cards">
+    <div class="card shadow" style="width: 18rem;">
+      <img [src]="item.image" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"> {{ item.name }} </h5>
+        <p class="card-text text-center"> {{ item.price }} €</p>
+        <div [hidden]="!cardState.isVisible">
+          <div class="container ad_card_adder">
+            <button class="btn btn-success" (click)="cardState.increment(item)">+</button>
+            <p> {{ item.quantity }} </p>
+            <button class="btn btn-danger" (click)="cardState.decrement(item)">-</button>
+          </div>
+          <div class="container d-flex justify-content-center gap-3">
+            <button href="#" class="btn btn-danger" (click)="cardState.delete(item)">Elimina</button>
+            <button class="btn btn-primary" [routerLink]="['/products', item.id]">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>
+

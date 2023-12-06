@@ -1,0 +1,42 @@
+
+<div class="container">
+  <h3 class="fs-4">Carello</h3>
+  <div class="ad_circle">
+    <button [disabled]="cardState.btnDisabled" (click)="cardState.openModal()" class="ad_btn_cart">
+      <img src="https://static.vecteezy.com/system/resources/previews/004/988/676/original/pizza-delivery-with-shopping-cart-logo-free-vector.jpg"
+      alt="cart"
+      >
+    </button>
+  </div>
+</div>
+
+<!-- modal -->
+<div class="modal" tabindex="-1" role="dialog" [hidden]="cardState.isModal" style="display: block;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Carello</h4>
+      </div>
+
+      <div class="modal-body">
+
+        <div class="container" *ngFor="let card of cardState.cards">
+          <div *ngIf="card.quantity > 0">
+            <ul class="ad_list_cart">
+              <li> <img [src]="card.image" alt="" class="ad_img"> </li>
+              <li><p>{{ card.name }}</p> </li>
+              <li><p>qt: {{ card.quantity }} * {{ card.price }} = </p></li>
+              <li><p>{{ card.quantity * card.price}} €</p></li>
+            </ul>
+          </div>
+        </div>
+
+         <p> <b>total = </b></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="resetAll()">Buy</button>
+        <button type="button" class="btn btn-danger" (click)="cardState.closeModal()">Close</button>
+      </div>
+    </div>
+</div>
+

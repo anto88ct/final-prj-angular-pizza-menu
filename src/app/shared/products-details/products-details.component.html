@@ -1,0 +1,16 @@
+
+<div class="container">
+    <div class="error alert alert-danger" *ngIf="error">
+      {{ error }}
+      <i class="fa fa-times" (click)="error = undefined"></i>
+    </div>
+    <div class="container">
+
+      <ul class="list-group">
+        <li class="list-group-item"><img [src]="card?.image" alt="" class="w-25 h-25"></li>
+        <li class="list-group-item">{{card?.name}}</li>
+        <li class="list-group-item">{{card?.description}}</li>
+      </ul>
+
+    </div>
+</div>

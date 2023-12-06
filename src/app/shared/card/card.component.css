@@ -1,0 +1,10 @@
+.ad_card_adder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+.ad_card_adder button{
+
+  width: 46px;
+}

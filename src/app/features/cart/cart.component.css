@@ -1,0 +1,37 @@
+.ad_circle{
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ad_circle button img {
+  width: 95px;
+  height: 90px;
+  border-radius: 100px;
+  border: 2px solid black;
+  cursor: pointer;
+}
+
+.ad_btn_cart{
+
+  width: 98px;
+  height: 90px;
+  background-color: transparent;
+  border-radius: 100px;
+  border: none;
+}
+
+.ad_list_cart{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.ad_img{
+  width: 30px;
+  height: 30px;
+}
